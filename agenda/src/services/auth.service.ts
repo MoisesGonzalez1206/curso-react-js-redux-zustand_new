@@ -22,6 +22,9 @@ export const loginService = (username: string, password: string): Promise<AuthRe
    return axios.post('http://localhost:8080/login', {
      username,
      password,
+   },
+   {
+      withCredentials: true
    })
    .then((response: AxiosResponse<AuthResponse>) => response.data)
    .catch(() => {
