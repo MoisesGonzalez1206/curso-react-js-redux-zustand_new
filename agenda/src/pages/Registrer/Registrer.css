@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-.login-container {
+.register-container {
     max-width: 4s00px; /* Ancho máximo del contenedor */
     width: 100%; /* Permitir que el contenedor se ajuste al ancho de la pantalla */
     padding: 20px;
@@ -27,7 +27,7 @@ h2 {
     
 }
 
-.fondo{
+.fondo2{
     background-color: #780050;
     color: black;
     width: 150%;
@@ -36,6 +36,7 @@ h2 {
 }
 
 form {
+    margin-bottom: 5px;
     display: flex;
     color: black;
     align-items: center;
@@ -58,24 +59,7 @@ input:focus {
     outline: none;
 }
 
-.button-1 {
-    margin-left: 0%;
-    padding: 10px;
-    margin-top: 30px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 16px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 80%; /* Asegura que el botón ocupe todo el ancho del contenedor */
-}
-
-.button-1:hover {
-    background-color: #0056b3;
-}
-
-.button-2 {
+.button-3 {
     margin-left: 0%;
     padding: 10px;
     margin-top: 20px;
@@ -88,7 +72,24 @@ input:focus {
     width: 80%; /* Asegura que el botón ocupe todo el ancho del contenedor */
 }
 
-.button-2:hover {
+.button-3:hover {
+    background-color: #0056b3;
+}
+
+.button-4 {
+    margin-left: 0%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #da0000;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 80%; /* Asegura que el botón ocupe todo el ancho del contenedor */
+}
+
+.button-4:hover {
     background-color: #0056b3;
 }
 
@@ -108,7 +109,7 @@ input:focus {
     }
 }
 
-.login-icon {
+.register-icon {
   margin-bottom: 30px;
   width: 100px; /* Ajusta el ancho */
   height: 100px; /* Ajusta la altura */

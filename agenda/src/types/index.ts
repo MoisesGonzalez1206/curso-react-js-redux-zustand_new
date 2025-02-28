@@ -13,4 +13,11 @@ export interface AuthResponse {
     refreshToken: () => Promise<AuthResponse>;
   }
   
+  export interface AuthState2{
+    isAuthenticated: boolean;
+    checkAuth: () => Promise<{ isAuthenticated: boolean; }>;
+    registro: (username: string, password: string) => Promise<AuthResponse>;
+    registrout: () => Promise<string>;
+    refreshToken: () => Promise<AuthResponse>;
+  }
   

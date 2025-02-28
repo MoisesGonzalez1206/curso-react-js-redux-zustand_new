@@ -10,6 +10,7 @@ import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
 import { useAuthStore } from "./store/authStore";
 import { useQuery } from "@tanstack/react-query";
+import Registrer from "./pages/Registrer/Registrer";
 
 const App: React.FC = () => {
   const { isAuthenticated, checkAuth } = useAuthStore();
@@ -28,9 +29,14 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
+        <Route 
+          path="/register"
+          element={<Registrer/>}
+        />
+        
         <Route
           path="/login"
-          element={!isAuthenticated ? <Login /> : <Navigate to="/home" />}
+          element={!isAuthenticated ? <Login /> : <Navigate to="/home" />}//Login
         />
         <Route
           path="/home"
@@ -38,7 +44,7 @@ const App: React.FC = () => {
         />
         <Route
           path="*"
-          element={<Navigate to={isAuthenticated ? "/home" : "login"} />}
+          element={<Navigate to={isAuthenticated ? "/home" : "/login"} />}
         />
       </Routes>
     </Router>

@@ -31,3 +31,14 @@ export const loginService = (username: string, password: string): Promise<AuthRe
      throw new Error("Algo fallo al iniciar sesion");
    })
  }
+
+ export const registrerService = (username: string, password: string): Promise<AuthResponse[]> =>{
+   return axios.post('http://localhost:8080/register',{
+      username,
+      password,
+   })
+   .then((response: AxiosResponse<AuthResponse[]>) => response.data)
+   .catch(() => {
+      throw new Error("Algo fallo al registrarte");
+   })
+ }

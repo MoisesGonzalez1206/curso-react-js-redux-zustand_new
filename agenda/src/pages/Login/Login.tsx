@@ -36,11 +36,16 @@ const Login: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className='fondo'>
             <h2>Inicia sesión</h2>
+            <img  className='login-icon'
+                    src="https://cdn-icons-png.flaticon.com/512/6861/6861326.png" 
+                    alt='Login-icon' 
+                />
             {
                 error  && <p>{error}</p>
             }
+            
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -54,7 +59,10 @@ const Login: React.FC = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button type="submit">Iniciar sesión</button>
+                <button className='button-1' type="submit">Iniciar sesión</button>
+                <button className='button-2' type="button" onClick={() =>  navigate('/register')}>
+                    Registrarse
+                </button>
             </form>
         </div>
     );
