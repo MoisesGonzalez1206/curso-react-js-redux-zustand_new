@@ -21,6 +21,13 @@ const Registrer: React.FC = () => {
 
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        if (!username.trim() || !password.trim()) {
+            setError('El nombre de usuario y la contraseña son obligatorios.');
+            navigate('/login');
+            return;
+        }
+
+        setError(null);
         registrerAction(username, password)
     };
 
